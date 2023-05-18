@@ -38,4 +38,3 @@ def roman_to_int(roman_string):
     numm += to_subtract(list_numm)
 
     return (numm)
-
