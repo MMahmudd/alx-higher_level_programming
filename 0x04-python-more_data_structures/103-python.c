@@ -2,15 +2,15 @@
 #include <Python.h>
 
 /**
- * print_python_bytes - Printi byt information
+ * print_python_bytes - Prints bytes information
  *
- * @p: Python Objects
- * Return: not return
+ * @p: Python Object
+ * Return: no return
  */
 void print_python_bytes(PyObject *p)
 {
 	char *string;
-	long int siz, ii, limitt;
+	long int size, i, limit;
 
 	printf("[.] bytes object info\n");
 	if (!PyBytes_Check(p))
@@ -19,51 +19,51 @@ void print_python_bytes(PyObject *p)
 		return;
 	}
 
-	siz = ((PyVarObject *)(p))->ob_siz;
+	size = ((PyVarObject *)(p))->ob_size;
 	string = ((PyBytesObject *)p)->ob_sval;
 
-	printf("  size: %ld\n", siz);
+	printf("  size: %ld\n", size);
 	printf("  trying string: %s\n", string);
 
-	if (siz >= 10)
-		limitt = 10;
+	if (size >= 10)
+		limit = 10;
 	else
-		limitt = siz + 1;
+		limit = size + 1;
 
-	printf("  first %ld bytes:", limitt);
+	printf("  first %ld bytes:", limit);
 
-	for (ii = 0; ii < limitt; ii++)
-		if (string[ii] >= 0)
-			printf(" %02x", string[ii]);
+	for (i = 0; i < limit; i++)
+		if (string[i] >= 0)
+			printf(" %02x", string[i]);
 		else
-			printf(" %02x", 256 + string[ii]);
+			printf(" %02x", 256 + string[i]);
 
 	printf("\n");
 }
 
 /**
- * print_python_list - Print lists an information
+ * print_python_list - Prints list information
  *
- * @p: Python Objects
- * Return: not return
+ * @p: Python Object
+ * Return: no return
  */
 void print_python_list(PyObject *p)
 {
-	long int siz, ii;
+	long int size, i;
 	PyListObject *list;
 	PyObject *obj;
 
-	siz = ((PyVarObject *)(p))->ob_size;
+	size = ((PyVarObject *)(p))->ob_size;
 	list = (PyListObject *)p;
 
 	printf("[*] Python list info\n");
-	printf("[*] Size of the Python List = %ld\n", siz);
+	printf("[*] Size of the Python List = %ld\n", size);
 	printf("[*] Allocated = %ld\n", list->allocated);
 
-	for (ii = 0; ii < siz; ii++)
+	for (i = 0; i < size; i++)
 	{
-		obj = ((PyListObject *)p)->ob_item[ii];
-		printf("Element %ld: %s\n", ii, ((obj)->ob_type)->tp_name);
+		obj = ((PyListObject *)p)->ob_item[i];
+		printf("Element %ld: %s\n", i, ((obj)->ob_type)->tp_name);
 		if (PyBytes_Check(obj))
 			print_python_bytes(obj);
 	}
