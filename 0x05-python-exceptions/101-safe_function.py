@@ -4,7 +4,7 @@ import sys
 
 
 def safe_function(fct, *args):
-    """Executes a function safely.
+    """ A function used to execute a function safely.
 
     Argumets:
         fct: The function to execute.
@@ -12,7 +12,7 @@ def safe_function(fct, *args):
 
     Return:
         If errors occur - return None.
-        else - return the result of the function,fct.
+        else - return function fct.
     """
     try:
         result_of = fct(*args)
