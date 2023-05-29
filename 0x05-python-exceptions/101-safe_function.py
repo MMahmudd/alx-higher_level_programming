@@ -11,12 +11,12 @@ def safe_function(fct, *args):
         args: Argument of fct.
 
     Return:
-        If errors occur - retu None.
-        else - retu fct.
+        If errors occur - return None.
+        else - return fct.
     """
     try:
-        result_of = fct(*args)
-        return (result_of)
+        result = fct(*args)
+        return (result)
     except:
         print("Exception: {}".format(sys.exc_info()[1]), file=sys.stderr)
         return (None)
