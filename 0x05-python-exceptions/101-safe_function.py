@@ -1,12 +1,10 @@
-#!/usr/bin/python3
-
 import sys
-
 
 def safe_function(fct, *args):
     try:
-        result = fct(*args)
-        return (result)
-    except:
-        print("Exception: {}".format(sys.exc_info()[1]), file=sys.stderr)
-        return (None)
+        result_of = fct(*args)
+        return result_of
+    except Exception as e:
+        error_message = "Exception: {}".format(e)
+        print(error_message, file=sys.stderr)
+        return None
