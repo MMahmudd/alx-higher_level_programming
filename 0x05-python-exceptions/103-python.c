@@ -1,21 +1,23 @@
-/*
- * File: 103-python.c
- * Auth: Type Your Name Here
+/**
+ *
+ * File: name of the file is 103-python.c
+ * Auther: Mahmud M.
  */
 
 #include <Python.h>
 
+/* Function Declarations */
 void print_python_list(PyObject *p);
 void print_python_bytes(PyObject *p);
 void print_python_float(PyObject *p);
 
 /**
- * print_python_list - Prints basic info about Python lists.
- * @p: A PyObject list object.
+ * print_python_list - Printing the basic infomation about Python lists.
+ * @p: A PyObject list_object.
  */
 void print_python_list(PyObject *p)
 {
-	Py_ssize_t size, alloc, i;
+	P_size_t p_size, p_alloc, ii;
 	const char *type;
 	PyListObject *list = (PyListObject *)p;
 	PyVarObject *var = (PyVarObject *)p;
@@ -107,3 +109,4 @@ void print_python_float(PyObject *p)
 	printf("  value: %s\n", buffer);
 	PyMem_Free(buffer);
 }
+
