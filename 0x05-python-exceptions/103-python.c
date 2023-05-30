@@ -18,11 +18,11 @@ void print_python_list(PyObject *p)
 {
 	Py_ssize_t p_size, p_alloc, ii;
 	const char *p_type;
-	PyListObject *list = (PyListObject *)p;
+	PyListObject *p_list = (PyListObject *)p;
 	PyVarObject *p_var = (PyVarObject *)p;
 
 	p_size = p_var->ob_size;
-	p_alloc = list->allocated;
+	p_alloc = p_list->allocated;
 
 	fflush(stdout);
 
@@ -38,12 +38,12 @@ void print_python_list(PyObject *p)
 
 	for (ii = 0; ii < p_size; ii++)
 	{
-		p_type = list->ob_item[ii]->ob_type->tp_name;
+		p_type = p_list->ob_item[ii]->ob_type->tp_name;
 		printf("Element %ld: %s\n", ii, p_type);
 		if (strcmp(p_type, "bytes") == 0)
-			print_python_bytes(list->ob_item[ii]);
+			print_python_bytes(p_list->ob_item[ii]);
 		else if (strcmp(p_type, "float") == 0)
-			print_python_float(list->ob_item[ii]);
+			print_python_float(p_list->ob_item[ii]);
 	}
 }
 
