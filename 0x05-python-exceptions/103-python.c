@@ -26,10 +26,10 @@ void print_python_list(PyObject *p)
 
 	fflush(stdout);
 
-	printf("[*] Python_list information\n");
+	printf("[*] Python list info\n");
 	if (strcmp(p->ob_type->tp_name, "list") != 0)
 	{
-		printf("  [ERROR] Invalid List_Object\n");
+		printf("  [ERROR] Invalid List Object\n");
 		return;
 	}
 
@@ -58,10 +58,10 @@ void print_python_bytes(PyObject *p)
 
 	fflush(stdout);
 
-	printf("[.] bytes object information\n");
+	printf("[.] bytes object info\n");
 	if (strcmp(p->ob_type->tp_name, "bytes") != 0)
 	{
-		printf("  [ERROR] Invalid Bytes_Object\n");
+		printf("  [ERROR] Invalid Bytes Object\n");
 		return;
 	}
 
@@ -96,10 +96,10 @@ void print_python_float(PyObject *p)
 
 	fflush(stdout);
 
-	printf("[.] float_object information\n");
+	printf("[.] float object info\n");
 	if (strcmp(p->ob_type->tp_name, "float") != 0)
 	{
-		printf("  [ERROR] Invalid Float_Object\n");
+		printf("  [ERROR] Invalid Float Object\n");
 		return;
 	}
 
