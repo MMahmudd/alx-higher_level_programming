@@ -9,7 +9,7 @@ class Rectangle:
         """Initialization a new_Rectangle.
 
         Arguments:
-            width (int):  Width of new_rectangle.
+            width (int): Width of new_rectangle.
             height (int): Height of new_rectangle.
         """
         self.width = width
@@ -17,7 +17,7 @@ class Rectangle:
 
     @property
     def width(self):
-        """Getter/setter width of Rectangle."""
+        """Getter/setter a width of Rectangle."""
         return self.__width
 
     @width.setter
@@ -30,7 +30,7 @@ class Rectangle:
 
     @property
     def height(self):
-        """Getter/setter height of Rectangle."""
+        """Getter/setter a height of Rectangle."""
         return self.__height
 
     @height.setter
@@ -42,19 +42,19 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        """Return the area of the Rectangle."""
+        """Returns an area of Rectangle."""
         return (self.__width * self.__height)
 
     def perimeter(self):
-        """Returns perimeter of Rectangle."""
+        """Returns a perimeter of Rectangle."""
         if self.__width == 0 or self.__height == 0:
             return (0)
         return ((self.__width * 2) + (self.__height * 2))
 
     def __str__(self):
-        """Returns printing Rectangle.
+        """Returns print that's representation of Rectangle.
 
-        Representing rectangle with # char.
+        prints out a rectangle using this # char.
         """
         if self.__width == 0 or self.__height == 0:
             return ("")
@@ -65,3 +65,13 @@ class Rectangle:
             if ii != self.__height - 1:
                 rect_char.append("\n")
         return ("".join(rect_char))
+
+    def __repr__(self):
+        """Returns string that's representation of Rectangle."""
+        rect_char = "Rectangle(" + str(self.__width)
+        rect_char += ", " + str(self.__height) + ")"
+        return (rect_char)
+
+    def __del__(self):
+        """Prints a message for the deleted Rectangle."""
+        print("Bye rectangle...")

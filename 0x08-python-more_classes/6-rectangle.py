@@ -3,15 +3,22 @@
 
 
 class Rectangle:
-    """Represents Rectangle."""
+    """Represents Rectangle.
+
+    Attribute:
+        number_of_instances (integers): A number of instances of a Rectangle.
+    """
+
+    number_of_instances = 0
 
     def __init__(self, width=0, height=0):
-        """Initialization a new_Rectangle.
+        """Initialiation of a new_Rectangle.
 
         Arguments:
-            width (int):  Width of new_rectangle.
-            height (int): Height of new_rectangle.
+            width (int): Width of a new_rectangle.
+            height (int): Height of a new_rectangle.
         """
+        type(self).number_of_instances += 1
         self.width = width
         self.height = height
 
@@ -42,7 +49,7 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        """Return the area of the Rectangle."""
+        """Returns area of Rectangle."""
         return (self.__width * self.__height)
 
     def perimeter(self):
@@ -52,9 +59,9 @@ class Rectangle:
         return ((self.__width * 2) + (self.__height * 2))
 
     def __str__(self):
-        """Returns printing Rectangle.
+        """Returns print that's representation of a Rectangle.
 
-        Representing rectangle with # char.
+        Representing a rectangle using this # char.
         """
         if self.__width == 0 or self.__height == 0:
             return ("")
@@ -65,3 +72,14 @@ class Rectangle:
             if ii != self.__height - 1:
                 rect_char.append("\n")
         return ("".join(rect_char))
+
+    def __repr__(self):
+        """Returns  string that's  representation of of Rectangle."""
+        rect_char = "Rectangle(" + str(self.__width)
+        rect_char += ", " + str(self.__height) + ")"
+        return (rect_char)
+
+    def __del__(self):
+        """Prints a message for the deleted of a Rectangle."""
+        type(self).number_of_instances -= 1
+        print("Bye rectangle...")
