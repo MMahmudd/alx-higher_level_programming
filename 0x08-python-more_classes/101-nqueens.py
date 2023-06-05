@@ -60,7 +60,7 @@ def x_out(boardd, row, column):
         boardd[row][cc] = "x"
     # x out will all spot_below
     for rr in range(row + 1, len(boardd)):
-        board[r][column] = "x"
+        board[rr][column] = "x"
     # x out will all spot_above
     for rr in range(row - 1, -1, -1):
         boardd[rr][column] = "x"
@@ -113,7 +113,7 @@ def recursive_solving(boardd, row, queen, solution):
         if boardd[row][cc] == " ":
             tmp_boardd = boardd_deepcopy(boardd)
             tmp_boardd[row][cc] = "Q"
-            x_out(tmp_boardd, row, column)
+            x_out(tmp_boardd, row, cc)
             solution = recursive_solving(tmp_boardd, row + 1,
                                         queen + 1, solution)
 
