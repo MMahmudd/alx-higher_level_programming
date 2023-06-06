@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 # 101-lazy_matrix_mul.py
 """Defination of a function matrix multiplication use NumPy."""
-import numpy as np
+import numpy as my_numpy
 
 
 def lazy_matrix_mul(m_a, m_b):
@@ -12,4 +12,4 @@ def lazy_matrix_mul(m_a, m_b):
         m_b (list of lists of ints/floats): The second_matrix.
     """
 
-    return (np.matmul(m_a, m_b))
+    return (my_numpy.matmul(m_a, m_b))

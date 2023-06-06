@@ -58,11 +58,11 @@ New_lines within a string are be printed as_normal.
 
 ::
 
-    >>> text_indentation("Let us printing a new_line!:\nPrinted.")
-    Let us print a new-line!
+    >>> text_indentation("Let us printing a new_line!:\nPrint.")
+    Let us printing a new_line!:
     <BLANKLINE>
     <BLANKLINE>
-    Printed.
+    Print.
     <BLANKLINE>
     
 ::
