@@ -38,7 +38,7 @@ a TypeError is required to raise.
 
 ::
 
-    >>> say_my_name(ste(7), "Mahamud")
+    >>> say_my_name(7, "Mahamud")
     Traceback (most recent call last):
     TypeError: first_name must be a string
 
