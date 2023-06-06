@@ -38,19 +38,19 @@ a TypeError is required to raise.
 
 ::
 
-    >>> say_my_name(6, "Mahamud")
+    >>> say_my_name(ste(7), "Mahamud")
     Traceback (most recent call last):
     TypeError: first_name must be a string
 
 ::
 
-    >>> say_my_name("LeBrn", ["Cav", "Laker", "Hea"])
+    >>> say_my_name("heat", ["cold", "hot", "temp"])
     Traceback (most recent call last):
     TypeError: last_name must be a string
 
 ::
 
-    >>> say_my_name({"LeBrn": 6, "Jame": 24}, 7.8)
+    >>> say_my_name({"Mah": 7, "adem": 25}, 8.8)
     Traceback (most recent call last):
     TypeError: first_name must be a string
 
