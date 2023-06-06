@@ -14,16 +14,16 @@ and ``:``.
 ::
 
     >>> text_indentation = __import__('5-text_indentation').text_indentation
-    >>> text_indentation("hello?")
-    hello?
+    >>> text_indentation("Hello_World?")
+    Hello_World?
     <BLANKLINE>
 
 No_spaces are_printed at the_beginning of  line.
 
 ::
 
-    >>> text_indentation("   hi there.")
-    hi there.
+    >>> text_indentation("   hi bro.")
+    hi bro.
     <BLANKLINE>
 
 ::
@@ -51,15 +51,15 @@ text_not ending_with one of these_characters is not be ended with a new_line.
 
 ::
 
-    >>> text_indentation("No ending_period, What bad_grammar")
-    No ending_period, What bad_grammar
+    >>> text_indentation("No ending point, What a bad this")
+    No ending point, What a bad this.
 
 New_lines within a string are be printed as_normal.
 
 ::
 
-    >>> text_indentation("Let's printing a new-line! here goes:\nPrinted.")
-    Let's printing a new-line! here goes:
+    >>> text_indentation("Let us print a new-line!\nPrinted.")
+    Let us print a new-line!
     <BLANKLINE>
     <BLANKLINE>
     Printed.
@@ -75,9 +75,9 @@ New_lines within a string are be printed as_normal.
     <BLANKLINE>
 
 ::
-    >>> text_indentation("A nice \n new_line.")
+    >>> text_indentation("A nice\nNew_line.")
     A nice
-    new_line.
+    New_line.
     <BLANKLINE>
 
 A combo_example:
