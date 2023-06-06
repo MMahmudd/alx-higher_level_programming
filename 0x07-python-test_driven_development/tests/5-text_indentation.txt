@@ -52,19 +52,19 @@ text_not ending_with one of these_characters is not be ended with a new_line.
 ::
 
     >>> text_indentation("No ending point, What a bad this")
-    No ending point, What a bad this.
+    No ending point, What a bad this
 
 New_lines within a string are be printed as_normal.
 
 ::
 
-    >>> text_indentation("Let us print a new-line!\nPrinted.")
+    >>> text_indentation("Let us printing a new_line!:\nPrinted.")
     Let us print a new-line!
     <BLANKLINE>
     <BLANKLINE>
     Printed.
     <BLANKLINE>
-
+    
 ::
 
     >>> text_indentation("\n\n\n we just printed three new_lines.")
