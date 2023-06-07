@@ -74,7 +74,7 @@ class Rectangle:
              for jj in range(self.__width)]
             if ii != self.__height - 1:
                 rect_char.append("\n")
-                return ("".join(rect_char))
+        return ("".join(rect_char))
 
     def __repr__(self):
         """Returns a string that representation of a Rectangle."""
