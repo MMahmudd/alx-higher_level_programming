@@ -116,7 +116,8 @@ def recursive_solving(boardd, row, queen, solution):
             tmp_boardd = boardd_deepcopy(boardd)
             tmp_boardd[row][cc] = "Q"
             x_out(tmp_boardd, row, cc)
-            solution = recursive_solving(tmp_boardd, row + 1, queen + 1, solution)
+            solution = recursive_solving(
+                    tmp_boardd, row + 1, queen + 1, solution)
     return (solution)
 
 
