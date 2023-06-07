@@ -38,7 +38,7 @@ def get_solutionn(boardd):
     solutionn = []
     for rr in range(len(boardd)):
         for cc in range(len(boardd)):
-            if boardd[rr][column] == "Q":
+            if boardd[rr][cc] == "Q":
                 solutionn.append([rr, cc])
                 break
     return (solutionn)
