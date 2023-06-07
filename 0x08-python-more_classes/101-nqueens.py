@@ -7,11 +7,13 @@ Usage:$ ./nqueens.py N
 N must be an integer greater than or equal to 4.
 
 Attributes:
-          board (list): A list of lists representing the chessboard.
+          boardd (list): A list of lists representing the chessboard.
           solutions (list): A list of lists containing the solutions.
 
-The solutions are represented in the format [[row, column], [row, column], [row, column], [row, column]],
-where 'row' and 'column' represent the coordinates on the chessboard where a queen must be placed.
+The solutions are represented in the format
+[[row, column], [row, column], [row, column], [row, column]],
+where 'row' and 'column' represent the coordinates on 
+the chessboard where a queen must be placed.
 """
 import sys
 
@@ -36,7 +38,7 @@ def get_solutionn(boardd):
     solutionn = []
     for rr in range(len(boardd)):
         for cc in range(len(boardd)):
-            if board[rr][column] == "Q":
+            if boardd[rr][column] == "Q":
                 solutionn.append([rr, cc])
                 break
     return (solutionn)
@@ -48,7 +50,7 @@ def x_out(boardd, row, column):
     where non-attacking queens can no longer be placed, and X-es them out.
 
     Arguments:
-    board (list): The current chessboard represented as a list.
+    boardd (list): The current chessboard represented as a list.
     row (int): The row where the last queen was placed.
     column (int): The column where the last queen was placed.
     """
@@ -60,7 +62,7 @@ def x_out(boardd, row, column):
         boardd[row][cc] = "x"
     # x out will all spot_below
     for rr in range(row + 1, len(boardd)):
-        board[rr][column] = "x"
+        boardd[rr][column] = "x"
     # x out will all spot_above
     for rr in range(row - 1, -1, -1):
         boardd[rr][column] = "x"
@@ -114,9 +116,7 @@ def recursive_solving(boardd, row, queen, solution):
             tmp_boardd = boardd_deepcopy(boardd)
             tmp_boardd[row][cc] = "Q"
             x_out(tmp_boardd, row, cc)
-            solution = recursive_solving(tmp_boardd, row + 1,
-                                        queen + 1, solution)
-
+            solution = recursive_solving(tmp_boardd, row + 1, queen + 1, solution)
     return (solution)
 
 
