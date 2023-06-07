@@ -10,7 +10,7 @@ Attributes:
           boardd (list): A list of lists representing the chessboard.
           solutions (list): A list of lists containing the solutions.
 
-The solutions are represented in the format
+The solutions are represented in the format,
 [[row, column], [row, column], [row, column], [row, column]],
 where 'row' and 'column' represent the coordinates on 
 the chessboard where a queen must be placed.
