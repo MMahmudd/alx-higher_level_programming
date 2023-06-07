@@ -88,7 +88,8 @@ class Rectangle:
 
         rect_char = []
         for ii in range(self.__height):
-            [rect_char.append(str(self.print_symbol)) for jj in range(self.__width)]
+            [rect_char.append(str(self.print_symbol))
+             for jj in range(self.__width)]
             if ii != self.__height - 1:
                 rect_char.append("\n")
         return ("".join(rect_char))
