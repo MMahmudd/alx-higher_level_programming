@@ -6,8 +6,8 @@ class Rectangle:
     """Represents Rectangle.
 
     Attribute:
-        number_of_instances (integers): A number of an instances of a Rectangle.
-        print_symbol (any): A symbol used for string information.
+    number_of_instances (integers): A number of an instances of a Rectangle.
+    print_symbol (any): A symbol used for string information.
     """
 
     number_of_instances = 0
@@ -70,10 +70,11 @@ class Rectangle:
 
         rect_char = []
         for ii in range(self.__height):
-            [rect_char.append(str(self.print_symbol)) for jj in range(self.__width)]
+            [rect_char.append(str(self.print_symbol))
+             for jj in range(self.__width)]
             if ii != self.__height - 1:
                 rect_char.append("\n")
-        return ("".join(rect_char))
+                return ("".join(rect_char))
 
     def __repr__(self):
         """Returns a string that representation of a Rectangle."""
