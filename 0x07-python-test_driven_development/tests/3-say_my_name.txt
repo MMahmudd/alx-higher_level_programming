@@ -4,7 +4,7 @@
 Using 3-say_my_name.py
 ======================
 
-This_modules defination of a function ``say_my_name(first_name, last_name="")``.
+This_modules definition of a function ``say_my_name(first_name, last_name="")``.
 
 Using
 ====
