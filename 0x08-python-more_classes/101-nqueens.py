@@ -12,7 +12,7 @@ Attributes:
 
 The solutions are represented in the format,
 [[row, column], [row, column], [row, column], [row, column]],
-where 'row' and 'column' represent the coordinates on 
+where 'row' and 'column' represent the coordinates on
 the chessboard where a queen must be placed.
 """
 import sys
