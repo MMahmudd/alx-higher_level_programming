@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 # 3-say_my_name.py
-"""Defination of a function name-printing."""
+"""Definition of a function name-printing."""
 
 
 def say_my_name(first_name, last_name=""):
@@ -17,6 +17,6 @@ def say_my_name(first_name, last_name=""):
     if not isinstance(last_name, str):
         raise TypeError("last_name must be a string")
     if last_name:  # if last_name isn't empty
-        print("My name is {} {}".format(first_name, last_name))
+        print("My name is {} {}".format(first_name, last_name), end=" ")
     else:
-        print("My name is {}".format(first_name))
+        print("My name is {}".format(first_name), end=" ")
