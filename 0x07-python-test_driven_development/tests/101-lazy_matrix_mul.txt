@@ -190,7 +190,7 @@ equivalent. else, a ValueError will be raised.
     ... ]
     >>> print(lazy_matrix_mul(m_a, m_b))
     Traceback (most recent call last):
-    ValueError: setting an array element with a sequence.
+    ValueError: Matrix dimensions are incompatible for multiplication.
 
 ::
 
@@ -204,7 +204,7 @@ equivalent. else, a ValueError will be raised.
     ... ]
     >>> print(lazy_matrix_mul(m_a, m_b))
     Traceback (most recent call last):
-    ValueError: setting an array element with a sequence.
+    ValueError: Matrix dimensions are incompatible for multiplication.
 
 ::
 
@@ -215,4 +215,4 @@ equivalent. else, a ValueError will be raised.
     >>> m_b = m_a
     >>> print(lazy_matrix_mul(m_a, m_b))
     Traceback (most recent call last):
-    ValueError: setting an array element with a sequence
+    ValueError: Matrix dimensions are incompatible for multiplication.
