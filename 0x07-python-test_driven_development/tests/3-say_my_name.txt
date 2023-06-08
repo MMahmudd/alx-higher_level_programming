@@ -28,7 +28,7 @@ an empty_string is required to  print instead.
 ::
 
     >>> say_my_name("Mahmud ")
-    My name is Mahmud 
+    My name is Mahmud
 
 Invali_ Names
 ==============
