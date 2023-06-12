@@ -10,5 +10,6 @@ class MyList(list):
     """
 
     def print_sorted(self):
-        """Printing a list sort ascending_order."""
-        print(sorted(self))
+        """Prints a sorted list in ascending order, handling None values separately."""
+        sorted_list = sorted(self, key=lambda x: x if x is not None else float('inf'))
+        print(sorted_list)
