@@ -1,0 +1,31 @@
+To use 7-base_geometry.py
+============================================
+
+This library is normal, due to having  only one function nemed
+ ''integer_validator()''.
+
+Number:
+========
+''integer_validator()'' returning a True if a number is integers.
+
+:: using a positive int
+   >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+   >>> bg = BaseGeometry()
+
+:: using a positive int
+   >>> bg.integer_validator("my_inte", 13)
+
+:: using a negative int
+   >>> bg.integer_validator("numb", -13)
+   Traceback (most recent call last):
+   ValueError: number must be greater than 0
+
+:: using three arguments parameters
+   >>> bg.integer_validator("num", 1, 2)
+   Traceback (most recent call last):
+   TypeError: integer_validator() takes 3 positional arguments but 4 were given
+
+:: using infinite_integer
+   >>> bg.integer_validator("infnumbe", int('inf'))
+   Traceback (most recent call last):
+   ValueError: invalid literal for int() with base 10: 'inf'
