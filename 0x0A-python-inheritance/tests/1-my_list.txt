@@ -36,7 +36,7 @@ Number_system:
    ValueError: invalid literal for int() with base 10: 'inf'
 
 :: Adding negative values to the list and printing the sorted list
-   >>> my_list.append(-1))
+   >>> my_list.append(-1)
    >>> my_list.print_sorted()
    [-1, 1, 2, 4, 8]
 
