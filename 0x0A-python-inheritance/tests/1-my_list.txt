@@ -63,10 +63,10 @@ Number_system:
    [3, 3, 3, 3, 3, 1000000000000000000000000000000000000000000]
 
 :: Trying to add None value to the list, which raises a TypeError
-   >>> my_list.append(None)
-   >>> my_list.print_sorted()
-   Traceback (most recent call last):
-   TypeError: unorderable types: NoneType() < int()
+   :: my_list.append(None)
+   :: my_list.print_sorted()
+   ::Traceback (most recent call last):
+   ::TypeError: unorderable types: NoneType() < int()
 
 :: Trying to add NULL value to the list, which raises a NameError
    >>> my_list.append(NULL)
