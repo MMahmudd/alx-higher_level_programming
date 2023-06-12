@@ -2,7 +2,7 @@
 To use the 1-my_list library
 ===========================
 
-This library is normal has one function called
+This cases are normal have one function called
  ''print_sorted()''.
 
 Number_system:
@@ -10,44 +10,59 @@ Number_system:
 
 ''print_sorted()'' returns the list sorted.
 
-:: with positives integers
+:: with positives_integers
    >>> MyList = __import__('1-my_list').MyList
+
+:: case one of parent_object
+   >>> my_list = [1, 2, 3]
+   >>> my_list.print_sorted()
+   Traceback (most recent call last):
+   File "<stdin>", line 1, in <module>
+   AttributeError: 'list' object has no attribute 'print_sorted'
+
+:: case two of positives_integers
    >>> my_list = MyList()
    >>> isinstance(my_list, list)
    True
    >>> my_list.print_sorted()
    []
 
-:: Adding items to the list and printing the sorted list
+:: case three adding items to the list
+:: and printing the sorted list
    >>> my_list.append(8)
    >>> my_list.append(4)
    >>> my_list.append(2)
    >>> my_list.print_sorted()
    [2, 4, 8]
 
-:: Adding zero values to the list and printing the sorted list
-   >>> my_list.append(1)
+:: case four adding zero values to the list
+:: and printing the sorted list
+   >>> my_list.append(0)
    >>> my_list.print_sorted()
-   [1, 2, 4, 8]
+   [0, 2, 4, 8]
 
-:: Trying to add infinite integer ('inf') to the list, which raises a ValueError
+:: case five trying to add infinite integer ('inf')
+:: to the list, which raises a ValueError
    >>> my_list.append(int('inf'))
    Traceback (most recent call last):
    ValueError: invalid literal for int() with base 10: 'inf'
 
-:: Adding negative values to the list and printing the sorted list
+:: cse six adding negative values to the list
+:: and printing the sorted list
    >>> my_list.append(-1)
    >>> my_list.print_sorted()
-   [-1, 1, 2, 4, 8]
+   [-1, 0, 2, 4, 8]
 
-:: Adding repeated elements to the list and printing the sorted list
+:: case seven adding repeated elements to the list
+:: and printing the sorted list
    >>> my_list.append(-1)
-   >>> my_list.append(1)
+   >>> my_list.append(0)
    >>> my_list.append(4)
    >>> my_list.print_sorted()
-   [-1, -1, 1, 1, 2, 4, 4, 8]
+   [-1, -1, 0, 0, 2, 4, 4, 8]
 
-:: Clearing the list and adding identical elements, then printing the sorted list
+:: case eight clearing the list and adding identical
+:: elements, then printing the sorted list
    >>> my_list.clear()
    >>> my_list.append(3)
    >>> my_list.append(3)
@@ -57,18 +72,21 @@ Number_system:
    >>> my_list.print_sorted()
    [3, 3, 3, 3, 3]
 
-:: Adding a maximum integer to the list and printing the sorted list
-   >>> my_list.append(1000000000000000000000000000000000000000000)
+:: case nine adding a maximum integer to the list
+:: and printing the sorted list
+   >>> my_list.append(12345678910)
    >>> my_list.print_sorted()
-   [3, 3, 3, 3, 3, 1000000000000000000000000000000000000000000]
+   [3, 3, 3, 3, 3, 12345678910]
 
-:: Trying to add None value to the list, which raises a TypeError
+:: case ten trying to add None value to the list
+:: which raises a TypeError
    :: my_list.append(None)
    :: my_list.print_sorted()
    ::Traceback (most recent call last):
    ::TypeError: unorderable types: NoneType() < int()
 
-:: Trying to add NULL value to the list, which raises a NameError
+:: case eleven trying to add NULL value to the list
+:: which raises a NameError
    >>> my_list.append(NULL)
    Traceback (most recent call last):
    NameError: name 'NULL' is not defined
