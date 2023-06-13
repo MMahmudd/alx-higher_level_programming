@@ -1,92 +1,83 @@
+Tasting_case for 1-my_list.py
 
-To use the 1-my_list library
-===========================
+case one import class from a module
+>>> MyList = __import__('1-my_list').MyList
 
-This cases are normal have one function called
- ''print_sorted()''.
+case two adding itmes to the list
+and printing the sorted list
 
-Number_system:
-=============
+>>> new_list = MyList()
+>>> new_list.append(10)
+>>> new_list.append(4)
+>>> new_list.append(6)
+>>> new_list.append(8)
+>>> new_list.append(2)
+>>> print(new_list)
+[10, 4, 6, 8, 2]
+>>> new_list.print_sorted()
+[2, 4, 6, 8, 10]
+>>> print(new_list)
+[10, 4, 6, 8, 2]
 
-''print_sorted()'' returns the list sorted.
+case three try to print not defined object
 
-:: with positives_integers
-   >>> MyList = __import__('1-my_list').MyList
+>>> MyList = __import__('1-my_list').MyList
+>>> new_list2.print_sorted()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'new_list2' is not defined
 
-:: case one of parent_object
-:: >>> my_list = [1, 2, 3]
-:: >>> my_list.print_sorted()
-:: Traceback (most recent call last):
-:: File "<stdin>", line 1, in <module>
-:: AttributeError: 'list' object has no attribute 'print_sorted'
+case four try to pass a list
 
-:: case two of positives_integers
-   >>> my_list = MyList()
-   >>> isinstance(my_list, list)
-   True
-   >>> my_list.print_sorted()
-   []
+>>> new_list_num = [2, 10, 5]
+>>> new_list = MyList(new_list_num)
+>>> new_list.print_sorted()
+[2, 5, 10]
 
-:: case three adding items to the list
-:: and printing the sorted list
-   >>> my_list.append(8)
-   >>> my_list.append(4)
-   >>> my_list.append(2)
-   >>> my_list.print_sorted()
-   [2, 4, 8]
+case five try to pass empty list
+and print out empty list
 
-:: case four adding zero values to the list
-:: and printing the sorted list
-   >>> my_list.append(0)
-   >>> my_list.print_sorted()
-   [0, 2, 4, 8]
+>>> new_list_num = []
+>>> new_list = MyList(new_list_num)
+>>> new_list.print_sorted()
+[]
 
-:: case five trying to add infinite integer ('inf')
-:: to the list, which raises a ValueError
-   >>> my_list.append(int('inf'))
-   Traceback (most recent call last):
-   ValueError: invalid literal for int() with base 10: 'inf'
+case six try to pass one item or number
+and print out that item number
 
-:: cse six adding negative values to the list
-:: and printing the sorted list
-   >>> my_list.append(-1)
-   >>> my_list.print_sorted()
-   [-1, 0, 2, 4, 8]
+>>> new_list = MyList()
+>>> new_list.append(11)
+>>> new_list.print_sorted()
+[11]
+>>> print(new_list)
+[11]
 
-:: case seven adding repeated elements to the list
-:: and printing the sorted list
-   >>> my_list.append(-1)
-   >>> my_list.append(0)
-   >>> my_list.append(4)
-   >>> my_list.print_sorted()
-   [-1, -1, 0, 0, 2, 4, 4, 8]
+case seven try to pass the same number
+and print out that new list
 
-:: case eight clearing the list and adding identical
-:: elements, then printing the sorted list
-   >>> my_list.clear()
-   >>> my_list.append(3)
-   >>> my_list.append(3)
-   >>> my_list.append(3)
-   >>> my_list.append(3)
-   >>> my_list.append(3)
-   >>> my_list.print_sorted()
-   [3, 3, 3, 3, 3]
+>>> new_list_2 = MyList()
+>>> new_list_2.append(2)
+>>> new_list_2.append(2)
+>>> new_list_2.append(2)
+>>> new_list_2.append(2)
+>>> new_list_2.print_sorted()
+[2, 2, 2, 2]
 
-:: case nine adding a maximum integer to the list
-:: and printing the sorted list
-   >>> my_list.append(12345678910)
-   >>> my_list.print_sorted()
-   [3, 3, 3, 3, 3, 12345678910]
+case eight try to pass parent_object
+>>> new_list = [1, 2, 3]
+>>> new_list.print_sorted()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'list' object has no attribute 'print_sorted'
 
-:: case ten trying to add None value to the list
-:: which raises a TypeError
-   :: my_list.append(None)
-   :: my_list.print_sorted()
-   ::Traceback (most recent call last):
-   ::TypeError: unorderable types: NoneType() < int()
+case nine tro to pass negative numbers
 
-:: case eleven trying to add NULL value to the list
-:: which raises a NameError
-   >>> my_list.append(NULL)
-   Traceback (most recent call last):
-   NameError: name 'NULL' is not defined
+>>> MyList = __import__('1-my_list').MyList
+>>> new_list = MyList()
+>>> new_list.append(6)
+>>> new_list.append(2)
+>>> new_list.append(-3)
+>>> new_list.append(0)
+>>> new_list.append(-10)
+>>> new_list.print_sorted()
+[-10, -3, 0, 2, 6]
