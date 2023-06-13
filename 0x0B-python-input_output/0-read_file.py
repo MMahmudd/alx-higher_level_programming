@@ -4,5 +4,4 @@ def read_file(filename=""):
     with open(filename, "r", encoding="utf-8") as file:
         # Read the entire file content
         text = file.read()
-        # Print the content to stdout without adding an extra newline character
         print(text, end="")
