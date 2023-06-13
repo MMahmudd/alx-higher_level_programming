@@ -7,5 +7,4 @@ def read_file(filename=""):
     stdout without adding an extra newline character"""
 
     with open(filename, "r", encoding="utf-8") as f_object:
-        text = f_object.read()
-        print(text, end="")
+        print(f_object.read, end="")
