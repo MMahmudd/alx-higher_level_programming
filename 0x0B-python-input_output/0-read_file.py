@@ -1,8 +1,8 @@
-#!/usr/bin/python3
 def read_file(filename=""):
-    """"A function that used to read a text_file
-    and print out its content"""
+    """Function that reads a text file and prints its content."""
 
-    with open(filename"r", encoding="UTF-8") as ff:
-        text_file = ff.read()
-        print(text_file, end="")
+    with open(filename, "r", encoding="utf-8") as file:
+        # Read the entire file content
+        text = file.read()
+        # Print the content to stdout without adding an extra newline character
+        print(text, end="")
