@@ -1,3 +1,6 @@
+#!/usr/bin/python3
+
+
 def read_file(filename=""):
     """Function that reads a text file and prints its content
     Read the entire file content. Print the content to
