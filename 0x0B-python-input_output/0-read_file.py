@@ -1,6 +1,6 @@
+#!/usr/bin/python3
 def read_file(filename=""):
-    """Function that reads a text file and prints its content."""
-
+    """ A function that reads a text_file and prints its contains"""
 
     with open(filename) as f:
         text = f.read()
