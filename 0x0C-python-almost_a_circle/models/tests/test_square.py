@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 # test_square.py
-# Brennan D Baraban <375@holbertonschool.com>
+
 """Definination of a class
 unittests_for models_square.py.
 
