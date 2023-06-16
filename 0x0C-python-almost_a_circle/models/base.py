@@ -9,7 +9,7 @@ import turtle
 class Base:
     """Base_model.
 
-    This is represented the "base" for all_other
+    This's represented the "base" for all_other
     classes in_project 0x0C*.
 
     Private Class_Attributes:
