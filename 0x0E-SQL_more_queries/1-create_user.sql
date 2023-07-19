@@ -1,8 +1,8 @@
--- creates_the MySQL_server user_user_0d_1.
-   -- user_0d_1 should have all_privileges on_your MySQL _erver
-   -- password set to user_0d_1_pwd
-   -- If_the user_user_0d_1 already_exists, script_shouldn't_fail
-
+-- Create the MySQL server user user_0d_1 if it doesn't already exist
 CREATE USER IF NOT EXISTS 'user_0d_1'@'localhost' IDENTIFIED BY 'user_0d_1_pwd';
+
+-- Grant all privileges to the user_0d_1 on all databases and tables
 GRANT ALL PRIVILEGES ON * . * TO 'user_0d_1'@'localhost';
+
+-- Refresh the MySQL privileges
 FLUSH PRIVILEGES;
