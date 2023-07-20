@@ -1,10 +1,9 @@
--- Query: List all shows from the hbtn_0d_tvshows database.
--- Each record should display: TV Show Title and Genre ID.
--- Results must be sorted in ascending order by TV Show Title and Genre ID.
--- If a show doesn’t have a genre, display NULL.
--- The database name "hbtn_0d_tvshows" will be passed as an argument of the mysql command.
+-- Lists all_genres_from the_database hbtn_0d_tvshows along_with the_number ofshows_linked to_each.
 
-SELECT tv_shows.title AS 'TV Show Title', tv_show_genres.genre_id AS 'Genre ID'
-FROM hbtn_0d_tvshows.tv_shows
-LEFT JOIN hbtn_0d_tvshows.tv_show_genres ON tv_shows.id = tv_show_genres.show_id
-ORDER BY tv_shows.title, tv_show_genres.genre_id;
+SELECT g.`name` AS `genre`,
+       COUNT(*) AS `number_of_shows`
+  FROM `tv_genres` AS g
+       INNER JOIN `tv_show_genres` AS t
+       ON g.`id` = t.`genre_id`
+ GROUP BY g.`name`
+ ORDER BY `number_of_shows` DESC;
