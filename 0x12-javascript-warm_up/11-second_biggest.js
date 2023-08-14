@@ -1,12 +1,12 @@
 #!/usr/bin/node
 
-const sizze = process.argv.length;
+const size = process.argv.length;
 
-if (sizze <= 3) {
+if (size <= 3) {
   console.log(0);
 } else {
-  const new_A = process.argv.map(Number);
-  new_A.slice(2, sizze);
-  new_A.sort((a, b) => a - b);
-  console.log(new_A[new_A.length - 2]);
+  const newA = process.argv.map(Number);
+  newA.slice(2, size);
+  newA.sort((a, b) => a - b);
+  console.log(newA[newA.length - 2]);
 }
