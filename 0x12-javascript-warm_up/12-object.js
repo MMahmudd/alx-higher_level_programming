@@ -6,5 +6,5 @@ const myObject = {
 console.log(myObject);
 /* YOUR CODE HERE
  */
-my_Object.value = 89;
+myObject.value = 89;
 console.log(myObject);
