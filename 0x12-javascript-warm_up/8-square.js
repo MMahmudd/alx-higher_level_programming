@@ -6,7 +6,7 @@ if (process.argv.length < 3 || isNaN(size)) {
   console.log('Missing size');
 } else {
   for (let i = 0; i < size; i++) {
-    charcs = '';
+    charc = '';
     for (let j = 0; j < size; j++) charc += 'X';
     console.log(charc);
   }
