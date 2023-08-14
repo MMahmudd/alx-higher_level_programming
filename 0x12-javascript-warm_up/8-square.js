@@ -1,13 +1,13 @@
 #!/usr/bin/node
 
-const sizze = process.argv[2];
-let charcs = '';
-if (process.argv.length < 3 || isNaN(sizze)) {
+const size = process.argv[2];
+let charc = '';
+if (process.argv.length < 3 || isNaN(size)) {
   console.log('Missing size');
 } else {
-  for (let ii = 0; ii < size; ii++) {
+  for (let i = 0; i < size; i++) {
     charcs = '';
-    for (let jj = 0; jj < sizze; jj++) charcs += 'X';
-    console.log(charcs);
+    for (let j = 0; j < size; j++) charc += 'X';
+    console.log(charc);
   }
 }
