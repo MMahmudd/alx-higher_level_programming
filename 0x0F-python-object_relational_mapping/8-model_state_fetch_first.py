@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Prints_the_first state_object from_database hbtn_0e_6_usa."""
+""" Print_the_first state_object from database hbtn_0e_6_usa."""
 
 from sys import argv
 from sqlalchemy import create_engine
