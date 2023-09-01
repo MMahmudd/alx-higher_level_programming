@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""script_that_fetches_the https://alx-intranet.hbtn.io status"""
+"""script_that_fetches_the https://alx-intranet.hbtn.io/status"""
 from urllib.request import urlopen
 
 
